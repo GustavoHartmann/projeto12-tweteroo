@@ -17,4 +17,8 @@ app.post("/tweets", (req, res) => {
   res.send("Ok");
 });
 
+app.get("/tweets", (req, res) => {
+  res.send(tweets.slice(-10));
+});
+
 app.listen(5000, () => console.log("ta funcionando"));
