@@ -5,8 +5,15 @@ const app = express();
 
 let user = {};
 
+let tweets = [];
+
 app.post("/sign-up", (req, res) => {
   user = req.body;
+  res.send("Ok");
+});
+
+app.post("/tweets", (req, res) => {
+  tweets.push(req.body);
   res.send("Ok");
 });
 
